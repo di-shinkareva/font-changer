@@ -1,6 +1,6 @@
 ## main стартовый модуль проекта
 
-# import <зависимость из задания>
+from functions import funс1, func2
 
 def main():
     #TODO-сделай вызов функций из functions
