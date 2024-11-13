@@ -3,7 +3,7 @@
 ## TODO - import <зависимость из задания>
 
 
-def functions(n):
+def funс1(n):
     """Функция 1"""
     pass
 
