@@ -27,3 +27,7 @@ def main():
 # Просим пользователя ввести путь к папке folder_path = input( "Введите путь к папке с файлами .docx: ").strip()
 # Преобразуем путь в абсолютный (для работыс относительными путями)
 folder_path = os. path. abspath(folder_path) # type: ignore
+# Проверяем, существует ли указанная папка
+if not os. path.isdir(folder_path):
+    print(f"Ошибка: Папка не найдена. Убедитесь, что путь указан правильно: {folder_path}")
+return
