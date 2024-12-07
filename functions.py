@@ -31,3 +31,7 @@ folder_path = os. path. abspath(folder_path) # type: ignore
 if not os. path.isdir(folder_path):
     print(f"Ошибка: Папка не найдена. Убедитесь, что путь указан правильно: {folder_path}")
 return
+# Вызываем функцию для обработки файла
+# Точка входа в программу
+if__name__== " __main__" 
+main()
