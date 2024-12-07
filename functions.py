@@ -14,4 +14,10 @@ from docx.oxml.ns import nsdecls # type: ignore # Для работы с
 run._element.rPr.rFonts.set(qn('W:eastAsia'), # type: ignore
 'Times New Roman')
 # Устанавливаем шрифт для языков East Asia
-run.font.size = Pt(14) 
+run.font.size = Pt(14) # type: ignore
+#
+Устанавливаем размер шрифта # type: ignore
+# Настраиваем межстрочный интервал
+p_pr = paragraph._element.get_or_add_pPr () # type: ignore
+spacing = parse_xml(r'<w:spacing %s w:line="360" w:lineRule="auto"/>' % nsdecls ('w'))
+p_pr. append (spacing)
