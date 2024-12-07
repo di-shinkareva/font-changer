@@ -21,3 +21,9 @@ run.font.size = Pt(14) # type: ignore
 p_pr = paragraph._element.get_or_add_pPr () # type: ignore
 spacing = parse_xml(r'<w:spacing %s w:line="360" w:lineRule="auto"/>' % nsdecls ('w'))
 p_pr. append (spacing)
+
+# Основная функция, которая обрабатывает все файлы в указанной папке
+def main():
+# Просим пользователя ввести путь к папке folder_path = input( "Введите путь к папке с файлами .docx: ").strip()
+# Преобразуем путь в абсолютный (для работыс относительными путями)
+folder_path = os. path. abspath(folder_path) # type: ignore
