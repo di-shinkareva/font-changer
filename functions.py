@@ -17,3 +17,12 @@ def modify_docx(file_path):
      except Exception as e:
         # Если возникает ошибка, выводим сообщение
         print(f"Ошибка при обработке файла {file_path}: {e}") # type: ignore
+        # Ищем все файлы .docx в папке
+        docx_files = [f for f in os.listdir(folder_path) if f.endswith('.docx')] # type: ignore
+
+    # Если файлы .docx не найдены, выводим сообщение
+        if not docx_files:
+         print("В указанной папке нет файлов .docx.")
+        return
+
+
