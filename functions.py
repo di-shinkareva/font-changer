@@ -13,3 +13,5 @@ from docx.oxml.ns import nsdecls # type: ignore # Для работы с
 # Устанавливаем шрифт
 run._element.rPr.rFonts.set(qn('W:eastAsia'), # type: ignore
 'Times New Roman')
+# Устанавливаем шрифт для языков East Asia
+run.font.size = Pt(14) 
