@@ -24,5 +24,11 @@ def modify_docx(file_path):
         if not docx_files:
          print("В указанной папке нет файлов .docx.")
         return
+     # Обрабатываем каждый файл
+     for file_name in docx_files:
+        file_path = os.path.join(folder_path, file_name)  # type: ignore # Получаем полный путь к файлу
+        print(f"Обрабатывается файл: {file_name}")
+        modify_docx(file_path)  # Вызываем функцию для обработки файла
+
 
 
